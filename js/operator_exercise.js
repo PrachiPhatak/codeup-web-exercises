@@ -1,0 +1,20 @@
+"use strict";
+
+console.log("'1' \+ 2  is " +'1' + 2);
+console.log("typeof '1' \+ 2 is " +typeof '1' + 2);
+console.log("6 % 4 is " + 6 % 4);
+console.log('3 + 4 is ' + (3 + 4));
+console.log('0 < 0 is '+ (0 < 0));
+console.log("\'false\' == false is "+ ('false' == false));
+console.log('true == \'true\' is '+ (true == 'true'));
+console.log("true == 'true' is "+ (true == 'true'));
+console.log("5 >= -5 is "+ (5 >= -5));
+console.log("!false || false is "+ (!false || false));
+console.log("true || \"42\" "+(true || "42"));
+console.log("!true && !false is "+ (!true && !false));
+console.log("6 % 5 is "+ (6 % 5));
+console.log("5 < 4 && 1 === 1 is "+ (5 < 4 && 1 === 1));
+console.log("typeof 'codeup' === 'string' is "+ (typeof 'codeup' === 'string'));
+console.log("4 >= 0 && 1 !== '1' is "+ (4 >= 0 && 1 !== '1'));
+console.log("6 % 3 === 0 is "+ (6 % 3 === 0));
+console.log("5 % 2 !== 0 is "+ (5 % 2 !== 0));

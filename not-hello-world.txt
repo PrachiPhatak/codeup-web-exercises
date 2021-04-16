@@ -1,2 +1,0 @@
-This is test git.
-Added new line to test the user.
