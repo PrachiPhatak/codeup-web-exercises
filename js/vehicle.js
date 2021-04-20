@@ -18,85 +18,52 @@
     //      endregion
 
     function getBodyStyle(input){
-        console.log("getBodyStyle: " +input);
         switch (input) {
             case "2D":
-                console.log("2D")
+                console.log("Customer chose: 2D")
                 return input
             case "4D":
-                console.log("4D")
+                console.log("Customer chose: 4D")
                 return input
             case "AWD":
-                console.log("AWD")
+                console.log("Customer chose: AWD")
                 return input
-            default:
-                console.log(`ERROR: BodyStyle ${input} not available.`)
-        }
-    }
-
-    function getVehicleType(input) {
-        console.log("getVehicleType: " +input);
-        switch (input){
             case "sports":
-                console.log("sports");
+                console.log("Customer chose: sports");
                 return input;
             case "sedan":
-                console.log("sedan");
+                console.log("Customer chose: sedan");
                 return input;
             case "compact":
-                console.log("compact");
+                console.log("Customer chose: compact");
                 return input;
             case "truck":
-                console.log("truck");
+                console.log("Customer chose: truck");
                 return input;
-            default:
-                console.log(`ERROR: The vehicle type ${input} is not available.`)
-        }
-    }
-
-    function getVehicleColor(input) {
-        console.log("getVehicleColor: " +input);
-        switch (input){
             case "white":
-                console.log("white");
+                console.log("Customer chose: white");
                 return input;
             case "red":
-                console.log("red");
+                console.log("Customer chose: red");
                 return input;
             case "yellow":
-                console.log("yellow");
+                console.log("Customer chose: yellow");
                 return input;
             case "black":
-                console.log("black");
+                console.log("Customer chose: black");
                 return input;
             default:
-                return "ERROR"
-                console.log(`ERROR: The color ${input} is not available`)
+                return "Error";
         }
     }
 
     function validateSpecs(){
-        var message = "Customer chose:\n";
-        var input = prompt("Enter the details");
-        console.log(input)
-        switch (input) {
-            case getBodyStyle(input):
-                message = message + `Body style: ${input}\n`;
-                validateSpecs();
-            case getVehicleColor(input):
-                message = message + `Color: ${input}\n`;
-                validateSpecs();
-            case getVehicleType(input):
-                message = message + `Vehicle Type: ${input}\n`;
-                validateSpecs();
-            default:
-                console.log(message)
-                break;
+        let input = prompt("Enter the details");
+        if(getBodyStyle(input) !== "Error"){
+            validateSpecs();
         }
-
-
     }
-    validateSpecs();
 
+    validateSpecs();
 
 })()
