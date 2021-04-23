@@ -12,7 +12,7 @@
 
     function printOddNumbers(num){
         for(let i = 1; i < 50; i += 2 ){
-            if(i == num){
+            if(i === num){
                 console.log(`Skipping ${i}`)
                 continue
             }

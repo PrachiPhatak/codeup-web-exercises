@@ -32,7 +32,7 @@ function analyzeColor(color){
     }
 }
 //var color = prompt("Enter color : ")
-var color = "Red";
+let color = "Red";
 analyzeColor(color);
 
 
@@ -41,8 +41,8 @@ analyzeColor(color);
 // - `colors`: a list of the colors of the rainbow
 // - `randomColor`: contains a single random color value from the list (this
 //                  will contain a different color every time the page loads)
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var randomColor = colors[Math.floor(Math.random() * colors.length)];
+let colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+let randomColor = colors[Math.floor(Math.random() * colors.length)];
 /**
  * TODO:
  * Pass the `randomColor` variable to your function and console.log the results.
@@ -138,7 +138,7 @@ function  calculateTotal(luckyNumber, totalBill){
  * price before the discount was, and what their price after the discount is.
  */
 //Generate a random number between 0 and 6
-var luckyNumber = Math.floor(Math.random() * 6);
+let luckyNumber = Math.floor(Math.random() * 6);
 console.log("Your lucky number is " + luckyNumber);
 console.log("Your bill is " +calculateTotal(luckyNumber, 100));
 
@@ -165,7 +165,7 @@ function isPositive(num) {
     return num >= 0;
 }
 function numberFun(){
-    var num ;
+    let num ;
     if(confirm("Would you like to enter a number?")){
         num = parseInt(prompt("Enter a number"));
     }

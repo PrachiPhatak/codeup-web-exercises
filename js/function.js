@@ -23,7 +23,7 @@
          * console.log 'helloMessage' to check your work
          */
 
-        var helloMessage = sayHello("students");
+        let helloMessage = sayHello("students");
         console.log(helloMessage);
 
         /**
@@ -36,7 +36,7 @@
 
         // Don't modify the following line, it generates a random number between 1 and 3
         // and stores it in a variable named random
-        var random = Math.floor((Math.random() * 3) + 1);
+        let random = Math.floor((Math.random() * 3) + 1);
 
         /**
          * TODO:
@@ -82,8 +82,8 @@
          * prompt the user for the bill total and a percentage they would like to tip,
          * then display the dollar amount they should tip
          */
-        var totalBill = prompt("Enter your total bill.");
-        var percent = prompt("What percentage will you like to tip?");
+        let totalBill = prompt("Enter your total bill.");
+        let percent = prompt("What percentage will you like to tip?");
         alert("Tip: "+ calculateTip(percent, totalBill));
         /**
          * TODO:
