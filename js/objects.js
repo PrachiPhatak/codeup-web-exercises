@@ -129,7 +129,6 @@
     }
     //Function call
     printBooks(books);
-
     printBreak();
 
     /**
@@ -142,9 +141,22 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+    function creatBook(nameOfBook, nameOfAuthor){
+        let book = {
+            name : nameOfBook,
+            author: nameOfAuthor
 
-    function createBook(nameOfTheBook, nameOfAuthorObject) {
-        const  copy = Object.create(Object.getPrototypeOf(obj));
+        }
+        return book;
+    }
+    function showBookInfo(book){
+        console.log(`Title: ${book.name}`)
+        console.log(`Author: ${book.author}`)
+        console.log("---")
     }
 
+    showBookInfo(creatBook("Harry Potter 1", "J.K. Rowling"));
+    showBookInfo(creatBook("Harry Potter 2", "J.K. Rowling"));
+    showBookInfo(creatBook("Harry Potter 3", "J.K. Rowling"));
+    showBookInfo(creatBook("Harry Potter 4", "J.K. Rowling"));
 })();
