@@ -3,19 +3,20 @@
     // and console.logs the multiplication table for that number
     // (just multiply by the numbers 1 through 10)
     // For example, showMultiplicationTable(7) should output
-    function randomNumber(){
-        return Math.floor(Math.random() * 10) + 1;
-    }
+
 
     function showMultiplicationTable(num){
-        let i = 1;
-        do{
-            console.log(`${num} * ${i} = ${num * i}`);
-            i++
-        }while(i <= 10)
+        let result = "\nMultiplication Table:";
+        for(let i= 1; i <=10; i++){
+           result = result + "\n"+ `${num} * ${i} = ${num * i}`;
+        }
+        return result;
     }
     //Function call
-    showMultiplicationTable(randomNumber());
+    console.log(showMultiplicationTable(5))
+
+
+
     console.log("//---------------------------------------------------------------------------------");
     //TODO Use a for loop and the code from the previous lessons to generate 10 random numbers
     // between 20 and 200 and output to the console whether each number is odd or even.
@@ -32,7 +33,6 @@
                 console.log(`${num} is odd`);
             }
         }
-
     }
     //Function call
     oddOrEven();
@@ -54,6 +54,12 @@
         }
         return total;
     }
+    function numRepeat(num){
+        console.log("New Repeat solution")
+        for(let i = 1; i <= 9; i++){
+            console.log(i.toString().repeat(i));
+        }
+    }
 
     function printNumber(){
         for(let i = 1; i < 10; i++){
@@ -61,7 +67,8 @@
         }
     }
     //Function call
-    printNumber();
+    numRepeat(9);
+
     console.log("//---------------------------------------------------------------------------------");
     //TODO Create a for loop that uses console.log to create the output shown below.
     // 100

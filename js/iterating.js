@@ -52,20 +52,21 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+        //          [0, 1, 2, 3, 4]
     let arrNumber = [1, 2, 3, 4, 5]
 
     function first(arrNumber){
-        console.log("First Number: " + arrNumber[0] );
+        return arrNumber[0];
     }
     function second(arrNumber){
-        console.log("Second Number: " + arrNumber[1]);
+        return arrNumber[2];
     }
     function last(arrNumber){
-        console.log("Last Number: " + arrNumber[arrNumber.length - 1]);
+        return arrNumber[ arrNumber.length - 1 ];
     }
 
-    first(arrNumber);
-    second(arrNumber);
-    last(arrNumber);
+    console.log("First Number: " + first(arrNumber));
+    console.log("Second Number: " + second(arrNumber));
+    console.log("Last Number: " + last(arrNumber));
 
 })();
