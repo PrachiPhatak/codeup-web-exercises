@@ -69,6 +69,7 @@ let zoo = {
     isOpen: true,
     ranking: 1,
     yearOpened: 1922,
+
     animals: [
         {
             name:"Lion",
@@ -76,8 +77,9 @@ let zoo = {
             isMammal: true,
             canFly: false,
             livingPlace: "ground",
+            sounds: "ROARS!",
             animalSound : function (){
-                return "ROAR!";
+                return this.sounds;
             }
         },
         {
@@ -86,8 +88,9 @@ let zoo = {
             isMammal: true,
             canFly: false,
             livingPlace: "ground",
+            sounds:"Trumpets!",
             animalSound : function (){
-                return "Trumpet";
+                return this.sounds;
             }
         },
         {
@@ -96,8 +99,9 @@ let zoo = {
             isMammal: false,
             canFly: true,
             livingPlace: "ground and water",
+            sounds:"Quacks!",
             animalSound : function (){
-                return "Quack";
+                return this.sounds;
             }
         },
          {
@@ -106,8 +110,9 @@ let zoo = {
             isMammal: false,
             canFly: false,
             livingPlace: "ground and water",
+             sounds:"Peeps!",
             animalSound : function (){
-                return "Peep";
+                return "Peeps!";
             }
         },
         {
@@ -116,8 +121,9 @@ let zoo = {
             isMammal: true,
             canFly: false,
             livingPlace: "ground and water",
+            sounds: "Whines!",
             animalSound : function (){
-                return "Whine";
+                return this.sounds;
             }
         }
     ]
