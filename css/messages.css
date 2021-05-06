@@ -1,0 +1,57 @@
+:root {
+    --text-info:darkblue;
+    --bg-info:lightblue;
+
+    --text-success:darkgreen;
+    --bg-success:lightgreen;
+
+    --text-warning:greenyellow;
+    --bg-warning:lightgoldenrodyellow;
+
+    --text-error:darkred;
+    --bg-error:orangered;
+
+}
+/*:root {*/
+/*    --text-info:lightblue;*/
+/*    --bg-info:darkblue;*/
+
+/*    --text-success:lightgreen;*/
+/*    --bg-success:darkgreen;*/
+
+/*    --text-warning:lightgoldenrodyellow;*/
+/*    --bg-warning:greenyellow;*/
+
+/*    --text-error:orangered;*/
+/*    --bg-error:darkred;*/
+/*}*/
+body, html {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+}
+.message{
+    margin: 30px auto auto;
+    width: calc(100% - 200px);
+    padding: 1em;
+    border-radius: 10px;
+}
+.message-info{
+    color: var(--text-info);
+    background-color: var(--bg-info);
+    color: yell
+}
+.message-success{
+    color: var(--text-success);
+    background-color: var(--bg-success);
+}
+.message-warning{
+    color: var(--text-warning);
+    background-color: var(--bg-warning);
+}
+.message-error{
+    color: var(--text-error);
+    background-color: var(--bg-error);
+}

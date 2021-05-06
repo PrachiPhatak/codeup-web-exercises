@@ -7,7 +7,9 @@ body, html {
 
 form{
     /* This form should be separated from other elements by 1em */
+    margin: 1em;
     /* There must be 1em between the content and the border of this element */
+    padding: 1em;
 }
 
 fieldset {
@@ -35,7 +37,8 @@ fieldset {
 .form-group {
     /* This element must use 100% of the width */
     /* It should have a separation of .5em from elements on top of it and below it*/
-    padding: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .form-label {
@@ -45,12 +48,13 @@ fieldset {
 
 .btn-block {
     /* This element should use 100% of the width */
-    width: 100%;
+    width: 100%
 }
 
 .btn {
     /* There must be a separation of 8px between the text and the border of this element */
-    padding: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     /* The text color of this element should be white and bold */
     color: #FFFFFF;
     font-weight: bold;
@@ -68,9 +72,11 @@ fieldset {
     margin-top:0.5em;
 
     /* You'll need to use the `calc` function to make the width of this element match the width of the button */
+    width: calc(100% - (15px/2));
 
     /* See the example at: https://developer.mozilla.org/en-US/docs/Web/CSS/calc */
     /* HINT: Calculate based on the padding of the `.btn` class */
     /* HINT: Examples are available at: https://glitch.com/~input-button-width */
-    width: 100%;
+    /*width: 100%;*/
 }
+

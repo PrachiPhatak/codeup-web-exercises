@@ -28,6 +28,7 @@ ul li:before {
 ol{
     list-style-type: upper-roman;
 }
+
 td th{
     border: 1px solid #ddd;
 }
