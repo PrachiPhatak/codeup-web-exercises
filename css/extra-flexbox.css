@@ -1,0 +1,23 @@
+.container {
+    /*height: 80px;*/
+    border: 2px solid chocolate;
+    display: flex;
+    /*flex-direction: column;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+section{
+    border: 2px solid coral;
+}
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+.menu{
+    background-color: #818181;
+    align-content: start;
+}
+.sideNavigation{
+    background-color: #e88484;
+    align-content: start;
+}
