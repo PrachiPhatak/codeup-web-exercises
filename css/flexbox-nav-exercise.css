@@ -1,0 +1,38 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #818181;
+    box-sizing: border-box;
+    align-items: center;
+}
+ul{
+    list-style-type: none;
+    /*box-sizing: border-box;*/
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+}
+li{
+    padding: 0 0.5rem;
+}
+a:hover{
+    color: blue;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+ul.a{
+    font-family: "Work Sans";
+    font-size: 20px;
+    display: inline-block;
+}
+.companyLogo{
+    font-family: "Montserrat";
+    font-size: 3em;
+}
+i{
+    font-size: 20px;
+}
+
+
