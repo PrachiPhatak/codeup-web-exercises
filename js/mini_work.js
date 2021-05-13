@@ -1,8 +1,7 @@
-function print(num){
-    for(let i = 1; i <= num; i++){
-        console.log("*".repeat(i));
+function print(nums, pattern){
+    for(let i = 1; i <= nums; i++){
+        console.log(pattern.repeat(i));
     }
 }
-
 //function call
-print(15);
+print(15, "*");
