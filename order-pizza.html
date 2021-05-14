@@ -14,7 +14,7 @@
     <body>
         <!-- Main page content -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Pizzeria</a>
+            <a class="navbar-brand" href="#">Pizza World</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -45,11 +45,14 @@
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
                     <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
-                       aria-controls="nav-home" aria-selected="true">Home</a>
+                       aria-controls="nav-home" aria-selected="true"> <span
+                            class="badge badge-pill badge-secondary">1</span> Size and crust</a>
                     <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
-                       aria-controls="nav-profile" aria-selected="false">Profile</a>
+                       aria-controls="nav-profile" aria-selected="false"><span class="badge badge-pill badge-secondary">2</span>
+                        Cheese and Sauce</a>
                     <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
-                       aria-controls="nav-contact" aria-selected="false">Contact</a>
+                       aria-controls="nav-contact" aria-selected="false"><span class="badge badge-pill badge-secondary">3</span>
+                        Toppings</a>
                 </div>
             </nav>
             <div class="tab-content" id="nav-tabContent">
@@ -122,7 +125,9 @@
                         </div>
                     </div>
                     <div class="card-footer text-right">
-                        <a href="#" class="btn btn-primary rightAlignButton">Next Step ></a>
+                        <a class=" btn btn-primary rightAlignButton" data-toggle="tab" href="#nav-profile" role="tab"
+                           aria-controls="#nav-profile-tab" aria-selected="true">
+                            Next Step ></a>
                     </div>
                 </div>
                 <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
@@ -170,9 +175,12 @@
                             </div>
                         </div>
                         <div class="card-footer text-right">
-                            <div class="btn-group btn-primary rightAlignButton" role="group" aria-label="Basic example">
-                                <button type="button" class="btn">< Previous Step</button>
-                                <button type="button" class="btn">Next Step ></button>
+                            <div class=" btn-group  rightAlignButton" role="group" aria-label="Basic example">
+                                <a class="btn btn-primary rightAlignButton" data-toggle="tab" href="#nav-home" role="tab"
+                                   aria-controls="nav-home">< Previous</a>
+                                <a class="btn btn-primary rightAlignButton"  data-toggle="tab" href="#nav-contact" role="tab"
+                                   aria-controls="nav-contact" aria-selected="false">
+                                    Next ></a>
                             </div>
                         </div>
                     </div>
