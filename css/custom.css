@@ -1,16 +1,35 @@
 .jumbotron{
     background-image: url("../cover/pizza.png");
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
 }
 h1{
     width: 100%;
     text-align: center;
     background-color: rgba(255,255,255,0.6);
 }
-h2{
-
+.card-body {
+    margin-bottom: 1rem;
+}
+.form-check{
+    padding-left: 0;
 }
 .searchPosition{
     justify-self: start;
+}
+.rightAlignButton{
+    align-self: self-end;
+}
+.tab-content{
+    border: 1px solid rgba(0,0,0,.125);;
+}
+.cheeseContainer{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.veg{
+    margin-top: 1rem;
+}
+.formPadding{
+    margin-left: 2rem;
 }
