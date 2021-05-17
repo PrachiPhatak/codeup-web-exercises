@@ -2,15 +2,15 @@
 // When you call the function, pass in an array of your choosing
 
 function secondToLast(arr){
-    console.log(typeof arr[arr.length-2]);
+    return (typeof arr[arr.length-2]);
 }
 
 //function call
 let strArray = ['prachi', 'corey', 'demo'];
-secondToLast(strArray);
+console.log(secondToLast(strArray));
 
 let strNumber = [ 1, 2, 3, 4, 5, 6 ];
-secondToLast(strNumber);
+console.log(secondToLast(strNumber));
 
-let strMix = [ 1, 'prachi', 93.90, true, 23];
-secondToLast(strMix);
+let strMix = [ 1, 'prachi', 93.90, true, 23, "Tea"];
+console.log(secondToLast(strMix));
