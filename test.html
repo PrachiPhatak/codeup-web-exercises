@@ -241,25 +241,28 @@
         <title>Document</title>
     </head>
     <body>
-        <div class="list-group" id="myList" role="tablist">
-            <a class="list-group-item list-group-item-action active" data-toggle="list" href="#home" role="tab">Home</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#profile" role="tab">Profile</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#messages" role="tab">Messages</a>
-            <a class="list-group-item list-group-item-action" data-toggle="list" href="#settings" role="tab">Settings</a>
+        <div class="tabs">
+            <div role="tablist" aria-label="Sample Tabs">
+                <button role="tab" aria-selected="true" aria-controls="panel-1" id="tab-1" tabindex="0">
+                    First Tab
+                </button>
+                <button role="tab" aria-selected="false" aria-controls="panel-2" id="tab-2" tabindex="-1">
+                    Second Tab
+                </button>
+                <button role="tab" aria-selected="false" aria-controls="panel-3" id="tab-3" tabindex="-1">
+                    Third Tab
+                </button>
+            </div>
+            <div id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+                <p>Content for the first panel</p>
+            </div>
+            <div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+                <p>Content for the second panel</p>
+            </div>
+            <div id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
+                <p>Content for the third panel</p>
+            </div>
         </div>
-
-        <div class="tab-content">
-            <div class="tab-pane active" id="home" role="tabpanel">...</div>
-            <div class="tab-pane" id="profile" role="tabpanel">..x.</div>
-            <div class="tab-pane" id="messages" role="tabpanel">..r.</div>
-            <div class="tab-pane" id="settings" role="tabpanel">.xx..</div>
-        </div>
-
-        <script>
-            $(function () {
-                $('#myList a:last-child').tab('show')
-            })
-        </script>
     </body>
 </html>
 
