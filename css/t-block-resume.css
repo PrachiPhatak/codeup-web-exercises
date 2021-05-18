@@ -1,0 +1,13 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css");
+:root{
+    --main-color: #68d31b;
+}
+body{
+
+}
+hr{
+    border: 2px solid var(--main-color);
+}
+h2{
+    color: var(--main-color);
+}

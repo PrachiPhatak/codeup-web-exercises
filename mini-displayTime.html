@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+      <script>
+        //TODO: Write a function called showTime() that logs the current time after six seconds.
+        // To return a new date and time, save the results of new Date() to a variable. Example let dateTime = new Date();
+        let date = new Date();
+        function showTime(){
+          console.log(date.toLocaleTimeString())
+        }
+
+        console.log("now "+date.toLocaleTimeString())
+        let timeout = setTimeout(showTime, 1000);
+        clearTimeout(timeout);
+      </script>
+    </body>
+</html>
