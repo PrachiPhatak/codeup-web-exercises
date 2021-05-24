@@ -35,7 +35,6 @@
                 document.body.appendChild(getButtonGroup());
             }
 
-
             function getButtonGroup() {
                 let arrFunctions = [
                     changeHeader, changeSubHeaderColor, changeListItemColor, changeList0ToBlue, changeTheP
@@ -53,12 +52,11 @@
             }
 
             function getButtonNode(id, name, cbFunctionName) {
-                console.log(cbFunctionName)
                 let buttonNode = document.createElement("button");
                 buttonNode.setAttribute("id", id);
                 buttonNode.setAttribute("class", "btn bg-info border m-1")
                 buttonNode.addEventListener("click", cbFunctionName);
-                buttonNode.innerHTML = name;
+                buttonNode.textContent = name;
                 return buttonNode;
             }
 
