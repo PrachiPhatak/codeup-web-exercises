@@ -9,16 +9,18 @@
     </head>
     <body>
         <div id="form" class="container my-3">
+            <h2 class="text-monospace">How to write better blogs!</h2>
             <!-- Get header     -->
             <input id="header" class="my-2 rounded w-100" type="text" maxlength="100" placeholder="Blog Header">
             <!-- Get Content     -->
             <textarea id="content" class="my-2 rounded w-100" cols="50" rows="10" placeholder="Blog Content"></textarea>
             <!-- Get Img     -->
-            <input type="file" id="imgFile" class="my-2 rounded w-100" name="imgFile">
-            <!-- Post it     -->
+            <input type="file" id="imgFile" class="my-2 rounded w-100" name="imgFile" multiple/>
+            <img id="img1" alt="" hidden>
+            <!-- Get Tags           -->
+            <input id="tags" class="my-2 rounded w-100" type="text" maxlength="100" placeholder="Tags">
+            <!-- Preview it     -->
             <input id="preview" class="btn-block my-2" type="button" value="Preview">
-            <!-- Get Posted on     -->
-            <!-- Get next button     -->
         </div>
         <script src="js/extra-create-blogs.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
