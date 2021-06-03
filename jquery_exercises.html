@@ -6,27 +6,29 @@
     </head>
     <body>
 
-        <div id="pink">
+        <h1>Document Title</h1>
+        <p id="PId" class="pClass">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, autem corporis
+            cupiditate et
+            exercitationem laudantium minima neque nihil nulla obcaecati officiis placeat, quas ratione similique
+            suscipit tempore totam veritatis voluptates.
+        </p>
+        <ul id="ulId" class="pUl codeup">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+        <div id="divId" class="divClass">
             <img src="cover/coffee.jpeg" alt="">
         </div>
-        <div id="orange">
-            <img src="cover/minimal.jpg" style=" width: 500px" alt="">
-        </div>
-        <div class="hide">
-            <img src="cover/coffee.jpeg" alt="">
-        </div>
+
         <script src="https://code.jquery.com/jquery-2.2.4.min.js"
                 integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
                 crossorigin="anonymous"></script>
         <script>
             "use strict";
-            window.onload = function (){
-                alert("Window loaded")
-            }
-            $(document).ready(function (){
-                alert("Document finished loading.")
-            })
-
+            var contents = $('.codeup').html();
+            alert(contents);
         </script>
     </body>
 </html>
