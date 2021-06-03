@@ -1,12 +1,11 @@
 $("form").submit(function (event) {
-    $("#post-container").text($("input").first().val());
+    $("#post-container").text($("#userInput").val());
     alignText();
     event.preventDefault();
 });
 
 
-
-function alignText(){
+function alignText() {
     $("#post-container").css({
             "font-size": "64px",
             "color": "blue",
