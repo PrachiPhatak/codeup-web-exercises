@@ -1,15 +1,25 @@
 let arr = ["7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3", "-", "A/C", "0", "=", "+"];
-$(document).ready(function () {
 
+$(document).ready(function () {
     acceptOnlyNumbers();
     addButtonsWithEvent()
-
 });
 
 function acceptOnlyNumbers() {
-    $("#input").keypress(function (){
-        alert($(this).val())
-    })
+    $("#input").bind("keypress", function (e) {
+        //let keyCode = e.which ? e.which : e.keyCode
+        console.log("Key " + e.key);
+        console.log("Key " + e.code);
+        if (!arr.includes(e.key)) {
+            return false;
+        } else if (e.key === "=" || e.code === "Enter") {
+            console.log("Inside" + ($("#input").val()));
+            let ans = calculate($("#input").val());
+            $("#input").val(ans);
+            return false;
+        }
+
+    });
 }
 
 function addButtonsWithEvent() {

@@ -20,7 +20,6 @@ function addImageChangeEvents(){
     let handlerReset = function(){
         $(this).attr("src", "cover/question.png");
     }
-    alert(handlerBlueBckGnd)
     $('.col-md-3').find('.card-img-top').hover(handlerBlueBckGnd,handlerReset);
 }
 
