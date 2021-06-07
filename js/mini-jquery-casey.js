@@ -33,6 +33,17 @@ function changeCardText() {
     }
     $('.col-md-3').hover(handlerDuck, handlerReset);
 }
+// TODO: When an li with the .list-group-item class is clicked, replace the text with the same text, but uppercased
+//  -> ALSO, change the background of the li to a new color
+//  -> When the li is clicked again, reset the li background color to its original color
+//      -> Don't worry about changing the text back
+
+function addClickForLi(){
+    $('.list-group-item').click(function (){
+        $(this).toggleClass("upperCase");
+        $(this).toggleClass("backgroundColor")
+    })
+}
 
 // make sure the DOM is loaded first
 $(document).ready(function () {
@@ -40,4 +51,5 @@ $(document).ready(function () {
     addHoverEvents($(".card"), backgroundReset, backgroundBlue);
     addImageChangeEvents();
     changeCardText();
+    addClickForLi();
 });
