@@ -33,17 +33,43 @@ function changeCardText() {
     }
     $('.col-md-3').hover(handlerDuck, handlerReset);
 }
+
 // TODO: When an li with the .list-group-item class is clicked, replace the text with the same text, but uppercased
 //  -> ALSO, change the background of the li to a new color
 //  -> When the li is clicked again, reset the li background color to its original color
 //      -> Don't worry about changing the text back
 
-function addClickForLi(){
-    $('.list-group-item').click(function (){
+function addClickForLi() {
+    $('.list-group-item').click(function () {
         $(this).toggleClass("upperCase");
         $(this).toggleClass("backgroundColor")
     })
 }
+
+
+$("input").prop('required',true);
+
+$("#submitBtn").click(function (e) {
+    let user = {
+        firstName: $("#first").val(),
+        lastName: $("#last").val(),
+        handler: $("#redirect-url").val()
+    }
+    console.log(user);
+    //return false;
+});
+
+
+// TODO: After a 2 second delay (BOM), when the user loads the page, change #main-title to a value of your choosing
+//  (change text, background color, what have you)!
+$(document).ready(function () {
+    setTimeout(function () {
+        $("#main-title").text("Hello, World!")
+    }, 2000)
+});
+
+// TODO: When the user clicks #submitBtn, log to the console the values of #first, #last, and #handleField
+//  -> If any of the fields are empty, alert the user to fill the empty control (be sure to tell them which control was empty)
 
 // make sure the DOM is loaded first
 $(document).ready(function () {
@@ -52,4 +78,5 @@ $(document).ready(function () {
     addImageChangeEvents();
     changeCardText();
     addClickForLi();
+    //submitClick()
 });
