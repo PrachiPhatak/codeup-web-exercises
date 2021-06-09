@@ -39,4 +39,15 @@
     ],
     "price": 140
   }
+,
+  {
+    "title": "Phillips",
+    "quantity": 2,
+    "categories": [
+      "tool","automated"
+    ],
+    "price": 140
+  }
+
 ]
+
