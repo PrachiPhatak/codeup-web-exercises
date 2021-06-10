@@ -5,5 +5,4 @@ $(document).keyup(function (event) {
 });
 function displayNoOfLives(keyStroke) {
     $("#lives").text(keyStroke)
-    console.log()
 }

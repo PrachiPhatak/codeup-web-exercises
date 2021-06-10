@@ -6,11 +6,36 @@
     <body>
         <h1>Konami Code</h1>
         <div id="lives">
-            33
+            You're no of lives <span id="noOfLives">3</span>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
                 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
                 crossorigin="anonymous"></script>
-        <script src="js/jquery.js"></script>
+        <script>
+            "use strict";
+            let arrKeyStroke = [];
+            // let arrKonamiCode = [38,38,40,40,37,39,37,39,66,65];
+            let arrKonamiCode = [66, 65]
+            $(document).keyup(function (event) {
+                arrKeyStroke.push(event.keyCode)
+                console.log(arrKeyStroke);
+                if (isValidSubsequence(arrKeyStroke,arrKonamiCode)) {
+                    $("#noOfLives").val = ("30")
+                } else {
+                    $("#noOfLives").val  = ("300")
+                }
+            });
+
+            function isValidSubsequence(array, sequence) {
+                let arrIndex = 0;
+                let seqIndex = 0;
+
+                while (arrIndex < array.length && seqIndex < sequence.length) {
+                    if (sequence[seqIndex] === array[arrIndex]) seqIndex++;
+                    arrIndex++;
+                }
+                return seqIndex === sequence.length;
+            }
+        </script>
     </body>
 </html>
