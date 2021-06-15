@@ -6,7 +6,8 @@
     <body>
         <h1>Konami Code</h1>
         <div id="lives">
-            You're no of lives <span id="noOfLives">3</span>
+            <p>You're no of lives <span id="noOfLives">3</span><p>
+            <p id="secret">Enter the secret key:<span id="secreteKey"></span><p>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
                 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -18,11 +19,11 @@
             let arrKonamiCode = [66, 65]
             $(document).keyup(function (event) {
                 arrKeyStroke.push(event.keyCode)
-                console.log(arrKeyStroke);
+                $("#secreteKey").text(arrKeyStroke)
                 if (isValidSubsequence(arrKeyStroke,arrKonamiCode)) {
-                    $("#noOfLives").val = ("30")
-                } else {
-                    $("#noOfLives").val  = ("300")
+                    $("#noOfLives").text("30")
+                    $("#secret").remove()
+                    $("#lives").append(`<h1>Congratulations! You got 30 lives!</h1>`)
                 }
             });
 
