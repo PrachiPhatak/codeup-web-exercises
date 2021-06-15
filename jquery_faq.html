@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1>Parks List</h1>
+        <h3>National Parks</h3>
+        <ul id="national-parks">
+            <li>Arches</li>
+            <li>Badlands</li>
+            <li>Carlsbad Caverns</li>
+            <li>Denali</li>
+            <li>Everglades</li>
+        </ul>
+        <h3>State Parks of Texas</h3>
+        <ul id="state-parks-texas">
+            <li>Abilene</li>
+            <li>Big Bend</li>
+            <li>Choke Canyon</li>
+            <li>Davis Mountains</li>
+            <li>Enchanted Rock</li>
+        </ul>
+        <h3>Neighbourhood Parks</h3>
+        <ul id="neighbourhood-parks">
+            <li>Cinco Ranch</li>
+            <li>Grand Lakes</li>
+            <li>Cross Creek Pocket Park</li>
+            <li>Park and Splash Pad</li>
+            <li>Beckendorff Park</li>
+        </ul>
+        <button class="liBtn">Turn List Items yellow</button>
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script>
+            $("h3").click(function () {
+                alert("clicked")
+                $(this).find($("li")).fontWeight("bold");
+            })
+            $(".liBtn").click(function () {
+                alert($("h3").value)
+                $(this).find($("li")).backgroundColor("yellow");
+            })
+
+        </script>
+    </body>
+</html>

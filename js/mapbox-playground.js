@@ -1,4 +1,5 @@
-const token = "pk.eyJ1IjoicHJhY2hpcGhhdGFrIiwiYSI6ImNrcHBuODdhZTBid2gydXBheGhyd3p3eGEifQ.lFAZWrlALu4kbSdTG-Qq8A";
+const token = MAPBOX_TOKEN;
+const weatherMapToken = OPEN_WEATHER_TOKEN;
 let zoomLevel = 10;
 mapboxgl.accessToken = token;
 let map;
@@ -38,7 +39,7 @@ function zoomIn() {
 }
 
 function initMap(zoomLevel) {
-    console.log("In init function")
+    //console.log("In init function")
     return new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
@@ -69,9 +70,9 @@ function addMyFavouriteLocations() {
 }
 
 function hideOrShowMyFavouriteLocations() {
-    console.log("Button " + favLocationBtn.value)
+    //console.log("Button " + favLocationBtn.value)
     if (favLocationBtn.value === "true") {
-        console.log("inside if")
+        //console.log("inside if")
         addMyFavouriteLocations();
         favLocationBtn.value = "false";
         favLocationBtn.textContent = "Hide my favorite places"
@@ -84,6 +85,8 @@ function hideOrShowMyFavouriteLocations() {
 }
 
 function setMarker(point) {
+    //console.log("point "+point)
+    console.log(showWeather(point));
     return new mapboxgl.Marker().setLngLat(point).addTo(map);
 }
 
