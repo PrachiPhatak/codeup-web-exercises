@@ -7,11 +7,18 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Definition List</title>
         <style>
-            .invisible{
+            .invisible {
                 visibility: hidden;
             }
-            .que{
+
+            .que {
                 font-weight: bold;
+            }
+            .square{
+                height:200px;
+                width: 200px;
+                border: black 1px solid;
+                display: inline-block;
             }
         </style>
     </head>
@@ -20,7 +27,8 @@
 
         <dl>
             <dt class="que">1. Where do I Make Reservations to Stay in Yellowstone?</dt>
-            <dd class="ans invisible">Yellowstone National Park Lodges operates the nine lodges in the park. All are open
+            <dd class="ans invisible">Yellowstone National Park Lodges operates the nine lodges in the park. All are
+                open
                 from late spring
                 through fall, but only two are open in the winter: Old Faithful Snow Lodge and Mammoth Hot Springs
                 Hotel. Be sure to make a reservation early!
@@ -38,7 +46,8 @@
             </dd>
 
             <dt class="que">3. Is Yellowstone the largest national park?</dt>
-            <dd class="ans invisible">No. More than half of Alaska’s national park units are larger, including Wrangell–St.
+            <dd class="ans invisible">No. More than half of Alaska’s national park units are larger, including
+                Wrangell–St.
                 Elias National Park and Preserve, which is the largest unit (13 million acres) in the National Park
                 System. Until 1994, Yellowstone (at 2.2 million acres) was the largest national park in the contiguous
                 United States. That year Death Valley National Monument was expanded and became a national park—it has
@@ -52,7 +61,8 @@
             </dd>
 
             <dt class="que">5. What is the difference between a national park and a national forest?</dt>
-            <dd class="ans invisible">National parks are administered by the Department of the Interior and national forests
+            <dd class="ans invisible">National parks are administered by the Department of the Interior and national
+                forests
                 by the Department of Agriculture. The National Park Service is mandated to preserve resources
                 unimpaired, while the Forest Service is mandated to wisely manage resources for many sustainable uses.
                 Six national forests surround Yellowstone National Park.
@@ -67,7 +77,8 @@
             </dd>
 
             <dt class="que">7. How do you become a park ranger?</dt>
-            <dd class="ans invisible">Many National Park Service employees begin their careers as volunteers or as seasonal
+            <dd class="ans invisible">Many National Park Service employees begin their careers as volunteers or as
+                seasonal
                 employees. Hiring is very competitive and is conducted through the Office of Personnel Management. Learn
                 more about working with us.
             </dd>
@@ -81,23 +92,85 @@
             </dd>
 
             <dt class="que">9. What is the highest peak in the park?</dt>
-            <dd class="ans invisible">Eagle Peak in the southeastern part of Yellowstone is the highest at 11,358 feet.</dd>
+            <dd class="ans invisible">Eagle Peak in the southeastern part of Yellowstone is the highest at 11,358
+                feet.
+            </dd>
 
             <dt class="que">10. Why is Yellowstone called a biosphere reserve and a world heritage site?</dt>
-            <dd class="ans invisible">The United Nations designated Yellowstone National Park as a biosphere reserve and a
+            <dd class="ans invisible">The United Nations designated Yellowstone National Park as a biosphere reserve and
+                a
                 world heritage site in recognition of the worldwide significance of its natural and cultural resources.
             </dd>
         </dl>
         <a href="#">Toggle</a>
+
+        <h1>Parks List</h1>
+        <h3>National Parks</h3>
+        <ul id="national-parks">
+            <li>Arches</li>
+            <li>Badlands</li>
+            <li>Carlsbad Caverns</li>
+            <li>Denali</li>
+            <li>Everglades</li>
+        </ul>
+        <h3>State Parks of Texas</h3>
+        <ul id="state-parks-texas">
+            <li>Abilene</li>
+            <li>Big Bend</li>
+            <li>Choke Canyon</li>
+            <li>Davis Mountains</li>
+            <li>Enchanted Rock</li>
+        </ul>
+        <h3>Neighbourhood Parks</h3>
+        <ul id="neighbourhood-parks">
+            <li>Cinco Ranch</li>
+            <li>Grand Lakes</li>
+            <li>Cross Creek Pocket Park</li>
+            <li>Park and Splash Pad</li>
+            <li>Beckendorff Park</li>
+        </ul>
+        <button class="liBtn">Turn List Items yellow</button>
+        <hr>
+        <div class="square" id="div1">Div1</div>
+        <div class="square" id="div2">Div2</div>
+        <div class="square" id="div3">Div3</div>
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
                 integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
                 crossorigin="anonymous"></script>
         <script>
-            $("a").click(function (event){
+            $("a").click(function (event) {
                 event.preventDefault();
                 $('.ans').toggleClass('invisible');
             })
-
+            $("h3").click(function () {
+                $(this).next($("li")).css("font-weight", "bold");
+            })
+            $(".liBtn").click(function () {
+                ($("ul")).css("background-color", "yellow");
+                ($("li")).css("background-color", "yellow");
+            })
+            $("li").click(function () {
+                $(this).parent($("ul")).css("background-color", "blue")
+            })
+            $("#div1").click(function (){
+                let text = $(this).text();
+                let text2 = $(this).next($("div")).text();
+                $(this).text(text2);
+                $(this).next($("div")).text(text);
+            })
+            $("#div2").click(function (){
+                let text = $(this).text();
+                let text2 = $(this).next($("div")).text();
+                $(this).text(text2);
+                $(this).next($("div")).text(text);
+            })
+            $("#div3").click(function (){
+                let text = $(this).text();
+                let text2 = $("div").first().text();
+                $(this).text(text2);
+                $("div").first().text(text);
+            })
 
         </script>
     </body>
