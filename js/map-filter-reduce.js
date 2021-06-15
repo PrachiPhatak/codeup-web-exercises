@@ -61,11 +61,28 @@ const instructors = users.reduce((accumulation, instructor, index) => {
     let comma = (users.length - 1 === index) ? "" : ", ";
     return accumulation += instructor.name + comma;
 }, 'Your instructors are: ');
-console.log(instructors);
+//console.log(instructors);
 
-const uniqueLang = users.reduce((accumulation, user) => {
+const uniqueLang = users.reduce((accumulation, user, t) => {
+    console.log(user.languages.filter(lang => !accumulation.includes(lang)))
     accumulation.push(...user.languages.filter(lang => !accumulation.includes(lang)))
     return accumulation;
 }, [])
 
-console.log(uniqueLang)
+let result = [];
+for (let i = 0; i < users.length; i++) {
+    for (const lang of users[i].languages) {
+        if (!result.includes(lang)) {
+            result.push(lang);
+        }
+    }
+}
+
+// console.log(result);//old way
+console.log(uniqueLang)//using reduce
+
+let desserts = ['cake', 'cookie', 'donut'];
+let desserts1 = ['icecream', 'flan', 'frozen yogurt', desserts];
+let desserts2 = ['icecream', 'flan', 'frozen yogurt', ...desserts];
+// console.log( desserts1);
+// console.log( desserts2);
