@@ -13,3 +13,5 @@ let hoverOut = function () {
     $(this).css("color", "black")
 };
 $('li').hover(hoverIn, hoverOut);
+
+$(".codeup").css("border", "red 2px solid")
