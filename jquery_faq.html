@@ -1,47 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Title</title>
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Definition List</title>
+        <style>
+            .invisible{
+                visibility: hidden;
+            }
+            .que{
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
-        <h1>Parks List</h1>
-        <h3>National Parks</h3>
-        <ul id="national-parks">
-            <li>Arches</li>
-            <li>Badlands</li>
-            <li>Carlsbad Caverns</li>
-            <li>Denali</li>
-            <li>Everglades</li>
-        </ul>
-        <h3>State Parks of Texas</h3>
-        <ul id="state-parks-texas">
-            <li>Abilene</li>
-            <li>Big Bend</li>
-            <li>Choke Canyon</li>
-            <li>Davis Mountains</li>
-            <li>Enchanted Rock</li>
-        </ul>
-        <h3>Neighbourhood Parks</h3>
-        <ul id="neighbourhood-parks">
-            <li>Cinco Ranch</li>
-            <li>Grand Lakes</li>
-            <li>Cross Creek Pocket Park</li>
-            <li>Park and Splash Pad</li>
-            <li>Beckendorff Park</li>
-        </ul>
-        <button class="liBtn">Turn List Items yellow</button>
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <!--Data obtained from https://www.nps.gov/yell/faqs.htm-->
+
+        <dl>
+            <dt class="que">1. Where do I Make Reservations to Stay in Yellowstone?</dt>
+            <dd class="ans invisible">Yellowstone National Park Lodges operates the nine lodges in the park. All are open
+                from late spring
+                through fall, but only two are open in the winter: Old Faithful Snow Lodge and Mammoth Hot Springs
+                Hotel. Be sure to make a reservation early!
+            </dd>
+
+            <dt class="que">2. How did Yellowstone get its name?</dt>
+            <dd class="ans invisible">Yellowstone National Park is named after the Yellowstone River, the major river
+                running through the
+                park. According to French-Canadian trappers in the 1800s, they asked the name of the river from the
+                Minnetaree tribe, who live in what is now eastern Montana. They responded “Mi tse a-da-zi,” which
+                literally translates as “Rock Yellow River.” The trappers translated this into French as “Roche Jaune”
+                or “Pierre Jaune.” In 1797, explorer-geographer David Thompson used the English translation—“Yellow
+                Stone.” Lewis and Clark called the Yellowstone River by the French and English forms. Subsequent use
+                formalized the name as “Yellowstone.
+            </dd>
+
+            <dt class="que">3. Is Yellowstone the largest national park?</dt>
+            <dd class="ans invisible">No. More than half of Alaska’s national park units are larger, including Wrangell–St.
+                Elias National Park and Preserve, which is the largest unit (13 million acres) in the National Park
+                System. Until 1994, Yellowstone (at 2.2 million acres) was the largest national park in the contiguous
+                United States. That year Death Valley National Monument was expanded and became a national park—it has
+                more than 3 million acres.
+            </dd>
+
+            <dt class="que">4. Is Yellowstone the most visited national park?</dt>
+            <dd class="ans invisible">Yellowstone is in the top five national parks for number of recreational visitors.
+                Great Smoky Mountains National Park often has the most. Visit https://irma.nps.gov/Stats/ to view
+                up-to-date statistics for all national parks.
+            </dd>
+
+            <dt class="que">5. What is the difference between a national park and a national forest?</dt>
+            <dd class="ans invisible">National parks are administered by the Department of the Interior and national forests
+                by the Department of Agriculture. The National Park Service is mandated to preserve resources
+                unimpaired, while the Forest Service is mandated to wisely manage resources for many sustainable uses.
+                Six national forests surround Yellowstone National Park.
+            </dd>
+
+            <dt class="que">6. How many rangers work in Yellowstone?</dt>
+            <dd class="ans invisible">Approximately 738 people work for the National Park Service during the peak summer
+                season. Approximately 386 are permanent, year-round employees. Park rangers work in education, resource
+                management, law enforcement, emergency medical services, and backcountry operations. Other employees
+                specialize in research, maintenance, management, administration, trail maintenance, fire management, and
+                fee collection.
+            </dd>
+
+            <dt class="que">7. How do you become a park ranger?</dt>
+            <dd class="ans invisible">Many National Park Service employees begin their careers as volunteers or as seasonal
+                employees. Hiring is very competitive and is conducted through the Office of Personnel Management. Learn
+                more about working with us.
+            </dd>
+
+            <dt class="que">8. Can we swim in rivers and lakes?</dt>
+            <dd class="ans invisible">Swimming is not recommended because most lakes and streams are dangerously cold.
+                Firehole Canyon, near Madison Junction, has a swimming area popular in summer. Soaking in thermal
+                features is illegal. The area known as the Boiling River, north of Mammoth Hot Springs, allows soaking
+                in the Gardner River near thermal outflow, but not in the feature itself. Soaking is allowed during
+                daylight hours only and at your own risk.
+            </dd>
+
+            <dt class="que">9. What is the highest peak in the park?</dt>
+            <dd class="ans invisible">Eagle Peak in the southeastern part of Yellowstone is the highest at 11,358 feet.</dd>
+
+            <dt class="que">10. Why is Yellowstone called a biosphere reserve and a world heritage site?</dt>
+            <dd class="ans invisible">The United Nations designated Yellowstone National Park as a biosphere reserve and a
+                world heritage site in recognition of the worldwide significance of its natural and cultural resources.
+            </dd>
+        </dl>
+        <a href="#">Toggle</a>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
         <script>
-            $("h3").click(function () {
-                alert("clicked")
-                $(this).find($("li")).fontWeight("bold");
+            $("a").click(function (event){
+                event.preventDefault();
+                $('.ans').toggleClass('invisible');
             })
-            $(".liBtn").click(function () {
-                alert($("h3").value)
-                $(this).find($("li")).backgroundColor("yellow");
-            })
+
 
         </script>
     </body>
