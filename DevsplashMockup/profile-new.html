@@ -46,38 +46,87 @@
                     <div class="container-xl border h-100">
                         <div class="row d-flex justify-content-center align-items-center h-100">
                             <div class="col">
-                                <div class="card card-registration my-4 border-0">
+                                <div class="card card-registration my-3 border-0">
                                     <div class="row g-0">
-                                        <form class="card-body px-md-5 pb-md-5 needs-validation" action="projects.html">
-                                            <h3 class="mb-5">Edit Project</h3>
+                                        <form class="card-body px-md-5 needs-validation" action="profile.html">
+                                            <h3 class="mb-5">Sign up</h3>
 
                                             <div class="row">
-                                                <div class="col-md-12 mb-4">
+                                                <div class="col-md-6 mb-4">
                                                     <div class="form-outline">
-                                                        <label class="form-label font-weight-bold" for="name">Project
+                                                        <label class="form-label font-weight-bold" for="form3Example1m">First
                                                             name</label>
-                                                        <input type="text" id="name"
-                                                               class="form-control form-control-lg" value="Bookmarked"
-                                                               required>
+                                                        <input type="text" id="form3Example1m"
+                                                               class="form-control form-control-lg" required/>
 
                                                     </div>
-                                                    <div class="form-outline mt-4">
-                                                        <label class="form-label font-weight-bold" for="description">Project
-                                                            Description</label>
-                                                        <textarea rows="10" id="description"
-                                                                  class="form-control form-control-lg"
-                                                                  required>Bookmark is an application where you can save your favorite books, add summary and share.
-                                                        </textarea>
+                                                </div>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <label class="form-label font-weight-bold" for="form3Example1n">Last
+                                                            name</label>
+                                                        <input type="text" id="form3Example1n"
+                                                               class="form-control form-control-lg" required/>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-md-12 mb-4">
-                                                    <label class="form-label font-weight-bold" for="technologies">Skills
-                                                        required</label>
-                                                    <select id="technologies" class="custom-select overflow-auto"
-                                                            multiple>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <label class="form-label font-weight-bold" for="display-name">Display
+                                                            name</label>
+                                                        <input type="text" id="display-name"
+                                                               class="form-control form-control-lg" required/>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6 mb-4">
+                                                    <div class="form-outline">
+                                                        <label class="form-label font-weight-bold" for="github-name">Github
+                                                            name</label>
+                                                        <input type="text" id="github-name"
+                                                               class="form-control form-control-lg"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12 mb-4">
+                                                    <div class="form-outline">
+                                                        <label class="form-label font-weight-bold" for="display-name">About Me</label>
+                                                        <textarea id="about-me"
+                                                                  class="form-control form-control-lg"
+                                                                  required>
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 mb-4">
+                                                    <div class="form-outline">
+                                                        <label class="form-label font-weight-bold" for="github-name">Profile Img URL
+                                                            </label>
+                                                        <input type="text" id="profile-img"
+                                                               class="form-control form-control-lg"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6 mb-4">
+                                                    <label class="form-label font-weight-bold" for="github-name">Languages
+                                                        I know</label>
+                                                    <select class="custom-select overflow-auto" multiple>
+                                                        <option value="1">Java</option>
+                                                        <option value="2">HTML</option>
+                                                        <option value="3">JS</option>
+                                                        <option value="3">JS</option>
+                                                        <option value="1">Java</option>
+                                                        <option value="2">HTML</option>
+                                                        <option value="3">JS</option>
+                                                        <option value="3">JS</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-6 mb-4">
+                                                    <label class="form-label font-weight-bold" for="github-name">Looking for someone who
+                                                        knows</label>
+                                                    <select class="custom-select overflow-auto" multiple>
                                                         <option value="1">Java</option>
                                                         <option value="2">HTML</option>
                                                         <option value="3">JS</option>
@@ -101,7 +150,7 @@
 
                                             <div class="row mt-5 mb-3 border border-danger rounded mx-auto">
                                                 <button class="btn btn-light btn-block col-12 col-md-10 border-dark mx-auto mt-5"
-                                                        type="submit">Delete Proect
+                                                        type="submit">Delete Profile
                                                 </button>
                                                 <small class="col-12 col-md-12 mt-1 mb-5 text-center text-danger">This
                                                     change will be permanent.</small>
