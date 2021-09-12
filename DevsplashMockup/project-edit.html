@@ -24,13 +24,13 @@
                     <div class="collapse navbar-collapse " id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item pl-5">
-                                <a class="nav-link" href="profile.html">Home</a>
+                                <a class="nav-link" href="#">Home</a>
                             </li>
                             <li class="nav-item pl-5">
-                                <a class="nav-link" href="members.html">Members</a>
+                                <a class="nav-link" href="#">Members</a>
                             </li>
                             <li class="nav-item pl-5">
-                                <a class="nav-link" href="projects.html">Projects</a>
+                                <a class="nav-link" href="#">Projects</a>
                             </li>
                             <li class="nav-item pl-5">
                                 <a class="nav-link" href="#">Signout</a>
@@ -48,66 +48,34 @@
                             <div class="col">
                                 <div class="card card-registration my-4 border-0">
                                     <div class="row g-0">
-                                        <form class="card-body p-md-5 needs-validation" action="profile.html">
-                                            <h3 class="mb-5">Edit Profile</h3>
+                                        <form class="card-body p-md-5 needs-validation" novalidate>
+                                            <h3 class="mb-5">Edit Project</h3>
 
                                             <div class="row">
-                                                <div class="col-md-6 mb-4">
+                                                <div class="col-md-12 mb-4">
                                                     <div class="form-outline">
-                                                        <label class="form-label" for="form3Example1m">First
+                                                        <label class="form-label" for="name">Project
                                                             name</label>
-                                                        <input type="text" id="form3Example1m"
-                                                               class="form-control form-control-lg" required/>
+                                                        <input type="text" id="name"
+                                                               class="form-control form-control-lg" required>
 
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6 mb-4">
                                                     <div class="form-outline">
-                                                        <label class="form-label" for="form3Example1n">Last
+                                                        <label class="form-label" for="description">First
                                                             name</label>
-                                                        <input type="text" id="form3Example1n"
-                                                               class="form-control form-control-lg" required/>
+                                                        <textarea type="text" rows="10" id="description"
+                                                               class="form-control form-control-lg" required>
+                                                        </textarea>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="row">
-                                                <div class="col-md-6 mb-4">
-                                                    <div class="form-outline">
-                                                        <label class="form-label" for="display-name">Display
-                                                            name</label>
-                                                        <input type="text" id="display-name"
-                                                               class="form-control form-control-lg" required/>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6 mb-4">
-                                                    <div class="form-outline">
-                                                        <label class="form-label" for="github-name">Github
-                                                            name</label>
-                                                        <input type="text" id="github-name"
-                                                               class="form-control form-control-lg"/>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6 mb-4">
-                                                    <label class="form-label" for="github-name">Languages
-                                                        I know</label>
-                                                    <select class="custom-select overflow-auto" multiple>
-                                                        <option value="1">Java</option>
-                                                        <option value="2">HTML</option>
-                                                        <option value="3">JS</option>
-                                                        <option value="3">JS</option>
-                                                        <option value="1">Java</option>
-                                                        <option value="2">HTML</option>
-                                                        <option value="3">JS</option>
-                                                        <option value="3">JS</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-6 mb-4">
-                                                    <label class="form-label" for="github-name">Looking for someone who
-                                                        knows</label>
-                                                    <select class="custom-select overflow-auto" multiple>
+                                                <div class="col-md-12 mb-4">
+                                                    <label class="form-label" for="technologies">Skills
+                                                        required</label>
+                                                    <select id="technologies" class="custom-select overflow-auto"
+                                                            multiple>
                                                         <option value="1">Java</option>
                                                         <option value="2">HTML</option>
                                                         <option value="3">JS</option>
@@ -121,8 +89,8 @@
                                             </div>
 
                                             <div class="d-flex justify-content-end pt-3">
-                                                <button class="btn btn-light btn-block col-12 border-dark mt-2"
-                                                      type="submit">Submit</button>
+                                                <a class="btn btn-light btn-block col-12 border-dark mt-2"
+                                                   href="profile.html" type="submit">Submit</a>
                                             </div>
 
                                         </form>
