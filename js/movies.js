@@ -1,101 +1,9 @@
-//data=``
-//loadPageData();
-
-loadPageData();
-function loadPageData() {
-    // getGitHubUsersFromJSON();
-    // getGitHubUsers();
-    let data = getGitHubUsersFromLocalMemory();
-    console.log(data);
-    $("#users").append(createPage(data));
-}
-
-function getGitHubUsers() {
-    console.log("Data Loading from GitHub")
-    const myGitHubRequest = new Request('https://api.github.com/users');
-    let gitHubObj = fetch(myGitHubRequest)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            $("#users").append(createPage(data));
-        })
-}
-
-function getGitHubUsersFromJSON() {
-    console.log("Data Loading from JSON")
-    const myGitHubRequest = new Request('data/gitHubUser.json');
-    let JSONObj = fetch(myGitHubRequest)
-        .then(response => response.json())
-        .then(function (data) {
-            console.log(data);
-            $("#users").append(createPage(data));
-        })
-}
-
-function getGitHubUsersFromLocalMemory() {
-    console.log("Data Loading from Local Memory")
-    return JSON.parse(localStorage.getItem("gitHubUserData"));
-}
-
-function createPage(data) {
-    let page = '';
-    data.forEach(function (record) {
-        page += `<div class="row bg-light p-3 mb-2">
-                <img class="col-3 rounded-circle border-dark" src="${record.avatar_url}" 
-                            alt="Profile Picture">
-                <div class="col-9">
-                    <div>
-                        <h5 class="text-nowrap"><a href="${record.html_url}">Name: ${record.login}</a></h5>
-                    </div>
-                    <div>
-                        <h5 class="d-inline-block">Followers</h5>
-                        <a href="https://api.github.com/users/defunkt/followers">230</a>
-                    </div>
-                    <div>
-                        <h5 class="repos">Repos</h5>
-                        <ul>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>`
-        // getRepos(record.login).then(function (html){
-        //     console.log(html)
-        //     page += html;
-        // })
-    })
-    return page;
-}
-
-function getRepos(user) {
-    const gitHubUserRepo = new Request(`https://api.github.com/users/${user}/repos?per_page=1`)
-    return fetch(gitHubUserRepo)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            return (`<li>
-                        <a href="${data.html_url}">${data.name}</a>
-                    </li>`)
-        })
-        .catch(error => console.log(error.json()))
-}
-
-// TODO: using fetch(), make a simple GET request to this api: “https://dog.ceo/api/breeds/image/random”
-//  and append this image to the image element with an id of “random-dog-image”
-// const myRequest = new Request('https://dog.ceo/api/breeds/image/random');
-// fetch(myRequest)
-//     .then(response => response.json())
-//     .then(data => {
-//         $("img").attr("src", data.message)
-//     })\
-
-
+"use strict";
 // getMovie(6);
-// getMovies();
-// postMovie();
-updateMovie(6);
-// deleteMovie(6);
-
+//getMovies();
+//  postMovie();
+// updateMovie(6);
+ deleteMovie(19);
 function getMovie(id) {
     const url = `https://movie-project-diamond-prachi.glitch.me/movies/${id}`;
     const options = {
@@ -117,6 +25,7 @@ function getMovies() {
             'Content-Type': 'application/json',
         }
     };
+    showLoading();
     fetch(url, options)
         .then(response => console.log(response.json())) /* Movie was created successfully */
         .catch(error => console.error(error)); /* handle errors */
@@ -134,13 +43,17 @@ function postMovie() {
             "and bullied by their son Dudley since the death of his parents ten years prior. ",
         "actors": "Daniel Radcliffe, Emma Watson, Rupert Grint",
     };
+    let obj1 = JSON.stringify(movieObj)
+    let obj2 = JSON.stringify(movieObj)
     const url = 'https://movie-project-diamond-prachi.glitch.me/movies';
     const options = {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify(movieObj),
+        dataType: "json",
+
+        data: {'one':obj1,'two':obj2}
     };
     fetch(url, options)
         .then(response => console.log(response)) /* review was created successfully */
@@ -185,3 +98,15 @@ function deleteMovie(id) {
         .then(response => console.log(response)) /* review was created successfully */
         .catch(error => console.error(error)); /* handle errors */
 }
+
+function showLoading(){
+
+}
+$("#edit").click(function (){
+    $(this).text("Save")
+    $("#plot").attr("contenteditable","true");
+})
+
+$( document ).ready(function() {
+    getMovies();
+});
